@@ -1,5 +1,7 @@
+import { Outlet } from "react-router-dom";
+
 function App() {
-    return <p>This is gonna be our CRM</p>;
+    return <Outlet />;
 }
 
 export default App;
