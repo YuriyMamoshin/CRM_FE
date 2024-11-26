@@ -4,7 +4,7 @@ import "~/assets/styles/index.scss";
 import App from "./App.tsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { MainPage } from "./pages/main-page/index.tsx";
-import { AppRoute } from "./common/enums/app-route.enum.ts";
+import { AppRoute } from "./common/enums/app-routes.enum.ts";
 
 const router = createBrowserRouter([
     {

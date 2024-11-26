@@ -1,0 +1,53 @@
+.button {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    font-family: var(--font-family-raleway);
+    gap: 10px;
+    justify-content: center;
+}
+
+.button_primary {
+    background-color: var(--primary-orange-600);
+    color: var(--white-700);
+
+    &:hover {
+        background-color: var(--primary-orange-800);
+    }
+
+    &:active {
+        background-color: var(--primary-orange-600);
+    }
+
+    &:disabled {
+        background-color: var(--grey-100);
+        color: var(--white-700);
+    }
+}
+
+.button_secondary {
+    background-color: var(--white-background);
+    border: 2x solid var(--primary-orange-600);
+    color: var(--primary-orange-600);
+
+    &:hover {
+        background-color: var(--primary-orange-100);
+        border-color: var(--primary-orange-800);
+        color: var(--primary-orange-800);
+    }
+
+    &:active {
+        border-color: var(--primary-orange-700);
+        color: var(--primary-orange-700);
+    }
+    &:disabled {
+        background-color: var(--grey-100);
+        border-color: var(--grey-300);
+        color: var(--grey-300);
+    }
+}
+
+.button_fill {
+    height: 51px;
+    width: 100%;
+}
