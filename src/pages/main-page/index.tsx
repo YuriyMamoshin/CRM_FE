@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { ButtonSize, ButtonVariant } from "~/common/enums";
 import logo from "~/assets/images/logo.svg";
 
-export const MainPage: React.FC = () => {
+const MainPage: React.FC = () => {
     return (
         <section className={styles["main-page"]}>
             <img src={logo} alt="Logo" className={styles["logo"]} />
@@ -34,3 +34,5 @@ export const MainPage: React.FC = () => {
         </section>
     );
 };
+
+export { MainPage };

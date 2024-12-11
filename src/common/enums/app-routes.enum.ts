@@ -1,3 +1,4 @@
-export enum AppRoute {
+export enum AppRoutes {
     ROOT = "/",
+    SIGN_IN = "/sign-in"
 }
