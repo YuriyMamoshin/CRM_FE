@@ -1,12 +1,18 @@
+@use "~/assets/styles/mixins.scss";
+
 .main-page {
     background: url("~/assets/images/main-background.png") center / cover;
     min-height: 100vh;
     padding: 8px 15px;
     position: relative;
-}
 
-.logo {
-    width: 134px;
+    @include mixins.media("tablet") {
+        padding: 8px 40px;
+    }
+
+    @include mixins.media("desktop") {
+        padding: 8px 40px;
+    }
 }
 
 .content-wrapper {
@@ -17,6 +23,14 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 345px;
+
+    @include mixins.media("tablet") {
+        width: 440px;
+    }
+
+    @include mixins.media("desktop") {
+        width: 996px;
+    }
 }
 
 .heading {
@@ -24,6 +38,11 @@
         var(--font-family-raleway);
     line-height: 150%;
     margin-bottom: 40px;
+
+    @include mixins.media("desktop") {
+        font: var(--font-weight-super-bold) var(--font-size-h2-big)
+            var(--font-family-inter);
+    }
 }
 
 .heading__span {
@@ -41,45 +60,12 @@
     gap: 24px;
     margin: 0 auto;
     width: 100%;
-}
 
-@media (width >= 600px) {
-    .main-page {
-        padding: 8px 40px;
-    }
-
-    .logo {
-        width: 160px;
-    }
-
-    .content-wrapper {
-        width: 440px;
-    }
-
-    .buttons-container {
+    @include mixins.media("tablet") {
         width: 74.5%;
     }
-}
 
-@media (width >= 992px) {
-    .main-page {
-        padding: 8px 120px;
-    }
-
-    .logo {
-        width: 180px;
-    }
-
-    .content-wrapper {
-        width: 996px;
-    }
-
-    .heading {
-        font: var(--font-weight-super-bold) var(--font-size-h2-big)
-            var(--font-family-inter);
-    }
-
-    .buttons-container {
+    @include mixins.media("desktop") {
         width: 38.6%;
     }
 }

@@ -1,0 +1,17 @@
+@use "~/assets/styles/mixins.scss";
+
+.banner {
+    background-image: url(~/assets/images/starwars-bg-small.jpg);
+    background-position: center 82%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 408px;
+    width: 100%;
+    @include mixins.media("tablet") {
+        background-image: url(~/assets/images/starwars-bg-large.jpg);
+    };
+    @include mixins.media("desktop") {
+        background-image: url(~/assets/images/starwars-bg-small.jpg);
+    };
+
+}

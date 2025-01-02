@@ -1,0 +1,22 @@
+@use "~/assets/styles/mixins.scss";
+
+.logo {
+    height: 100px;
+    width: 134px;
+
+    &_white {
+        color: white;
+    }
+
+    &_black {
+        color: var(--grey-logo);
+    }
+
+    @include mixins.media("tablet") {
+        width: 160px;
+    }
+
+    @include mixins.media("desktop") {
+        width: 180px;
+    }
+}

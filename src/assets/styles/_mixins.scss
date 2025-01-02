@@ -1,0 +1,11 @@
+@use "_maps.scss";
+
+@mixin media($size-name) {
+    @each $breakpoint-name, $breakpoint-size in maps.$breakpoints {
+        @if $breakpoint-name == $size-name {
+            @media (min-width: $breakpoint-size) {
+                @content;
+            }
+        }
+    }
+}

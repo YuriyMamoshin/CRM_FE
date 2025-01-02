@@ -1,12 +1,12 @@
-import { Button } from "~/common/components/button";
+import { Button } from "~/common/components";
+import {Logo} from "~/common/components";
 import styles from "./styles.module.scss";
-import { ButtonSize, ButtonVariant } from "~/common/enums";
-import logo from "~/assets/images/logo.svg";
+import { ButtonSize, ButtonVariant, LogoVariant } from "~/common/enums";
 
 const MainPage: React.FC = () => {
     return (
         <section className={styles["main-page"]}>
-            <img src={logo} alt="Logo" className={styles["logo"]} />
+            <Logo variant={LogoVariant.WHITE}/>
             <article className={styles["content-wrapper"]}>
                 <h1 className={styles["heading"]}>
                     Стартуйте в IT з першим реальним проєктом від{" "}
