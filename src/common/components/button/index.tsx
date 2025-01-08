@@ -18,12 +18,14 @@ const sizes: Record<ButtonSize, string> = {
 type ButtonProperties = {
     children?: ReactNode;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    prependedIcon?: ReactNode,
     size?: ValueOf<typeof ButtonSize>;
     variant: ValueOf<typeof ButtonVariant>;
 };
 
 const Button: React.FC<ButtonProperties> = ({
     children,
+    prependedIcon,
     size = ButtonSize.FILL,
     variant,
     onClick,
@@ -31,9 +33,10 @@ const Button: React.FC<ButtonProperties> = ({
 }) => {
     return (
         <button
-            className={clsx(variants[variant], styles.button, sizes[size])}
+            className={clsx(variants[variant], styles.button, sizes[size], prependedIcon && styles.button_icon)}
             {...restProperties}
         >
+            {prependedIcon}
             {children}
         </button>
     );

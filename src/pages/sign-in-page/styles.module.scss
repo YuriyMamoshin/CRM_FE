@@ -1,17 +1,50 @@
 @use "~/assets/styles/mixins.scss";
 
 .banner {
-    background-image: url(~/assets/images/starwars-bg-small.jpg);
-    background-position: center 82%;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 408px;
     width: 100%;
+    padding: 24px 7.17px 0 8.08px;
+
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-family-raleway);
+    color: var(--white-700);
+
+    background: url(~/assets/images/starwars-bg-small.jpg) no-repeat center
+        82% / cover;
+
     @include mixins.media("tablet") {
+        padding: 79px 40px 0;
+
         background-image: url(~/assets/images/starwars-bg-large.jpg);
-    };
+    }
+
     @include mixins.media("desktop") {
+        padding: 264px 79px 0 78px;
+
         background-image: url(~/assets/images/starwars-bg-small.jpg);
-    };
+    }
+
+    &__heading {
+        font-size: var(--font-size-h5-medium);
+        line-height: 28.18px;
+    }
+
+    &__list {
+        font-size: var(--font-size-body-medium);
+        line-height: 20px;
+    }
+}
+
+.content-wrapper {
+    width: 345px;
+    margin: 0 auto;
+
+    @include mixins.media("tablet") {
+        width: 327px;
+    }
+
+    @include mixins.media("desktop") {
+        width: 384px;
+    }
 
 }

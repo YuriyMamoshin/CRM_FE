@@ -1,53 +1,67 @@
 .button {
-    align-items: center;
-    border-radius: 10px;
     display: flex;
-    font-family: var(--font-family-raleway);
-    gap: 10px;
+    align-items: center;
     justify-content: center;
-}
+    gap: 10px;
 
-.button_primary {
-    background-color: var(--primary-orange-600);
-    color: var(--white-700);
+    font-family: var(--font-family-raleway);
 
-    &:hover {
-        background-color: var(--primary-orange-800);
-    }
+    border-radius: 10px;
 
-    &:active {
-        background-color: var(--primary-orange-600);
-    }
-
-    &:disabled {
-        background-color: var(--grey-100);
+    &_primary {
         color: var(--white-700);
-    }
-}
 
-.button_secondary {
-    background-color: var(--white-background);
-    border: 2x solid var(--primary-orange-600);
-    color: var(--primary-orange-600);
+        background-color: var(--primary-orange-600);
 
-    &:hover {
-        background-color: var(--primary-orange-100);
-        border-color: var(--primary-orange-800);
-        color: var(--primary-orange-800);
+        &:hover {
+            background-color: var(--primary-orange-800);
+        }
+
+        &:active {
+            background-color: var(--primary-orange-600);
+        }
+
+        &:disabled {
+            color: var(--white-700);
+
+            background-color: var(--grey-100);
+        }
     }
 
-    &:active {
-        border-color: var(--primary-orange-700);
-        color: var(--primary-orange-700);
-    }
-    &:disabled {
-        background-color: var(--grey-100);
-        border-color: var(--grey-300);
-        color: var(--grey-300);
-    }
-}
+    &_secondary {
+        color: var(--primary-orange-600);
 
-.button_fill {
-    height: 51px;
-    width: 100%;
+        background-color: var(--white-background);
+        border: 2px solid var(--primary-orange-600);
+
+        &:hover {
+            color: var(--primary-orange-800);
+
+            background-color: var(--primary-orange-100);
+            border-color: var(--primary-orange-800);
+        }
+
+        &:active {
+            color: var(--primary-orange-700);
+
+            border-color: var(--primary-orange-700);
+        }
+        &:disabled {
+            color: var(--grey-300);
+
+            background-color: var(--grey-100);
+            border-color: var(--grey-300);
+        }
+    }
+
+    &_fill {
+        height: 51px;
+        width: 100%;
+    }
+
+    &_icon {
+        justify-content: flex-start;
+        gap: 16px;
+        padding-left: 24px;
+    }
 }

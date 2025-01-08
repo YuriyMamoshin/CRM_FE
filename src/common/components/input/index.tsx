@@ -24,6 +24,7 @@ const Input = <T extends FieldValues>({
     control,
     disabled,
     errors,
+    label,
     name,
     placeholder,
     rows,
@@ -35,7 +36,8 @@ const Input = <T extends FieldValues>({
     const isTextArea = Boolean(rows);
 
     return (
-        <label>
+        <label className={styles["input-wrapper"]}>
+            {label}
             {isTextArea ? (
                 <textarea
                     disabled={disabled}
@@ -44,7 +46,7 @@ const Input = <T extends FieldValues>({
                     rows={rows}
                 ></textarea>
             ) : (
-                <input disabled={disabled} {...field} placeholder={placeholder} />
+                <input className={styles["input-wrapper__input"]} disabled={disabled} {...field} placeholder={placeholder} />
             )}
         </label>
     );
